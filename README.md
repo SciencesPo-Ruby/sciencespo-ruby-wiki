@@ -16,6 +16,8 @@ Le cours se déroule sur 12 séances de 2h. Les évaluations seront réalisées 
 2. [Ruby : les bases](bases_ruby.md)
 3. [Ruby : notions avancées](ruby_avance.md)
 
+Pour plus de détails sur la théorie de Ruby, vous pouvez aussi consulter le très bon site http://rubylearning.com/satishtalim/tutorial.html
+
 ### Remarque
 
 Ce cours s'adresse à des personnes n'ayant aucune base préalable de programmation informatique ou de mathématiques. L'objectif est donc de fournir des notions de bases permettant d'avoir un premier contact avec ce domaine, et non de créer du code optimisé :).
