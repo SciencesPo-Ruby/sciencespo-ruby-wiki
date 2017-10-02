@@ -14,3 +14,8 @@ Le cours se déroule sur 12 séances de 2h. Les évaluations seront réalisées 
 
 1. [Mettre en place son environnement de travail](environnement_de_travail.md)
 2. [Ruby : les bases](bases_ruby.md)
+3. [Ruby : notions avancées](ruby_avance.md)
+
+### Remarque
+
+Ce cours s'adresse à des personnes n'ayant aucune base préalable de programmation informatique ou de mathématiques. L'objectif est donc de fournir des notions de bases permettant d'avoir un premier contact avec ce domaine, et non de créer du code optimisé :).
