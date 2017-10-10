@@ -255,6 +255,6 @@ Exercices avancés :
 - Créer une classe Chat, dont les attributs sont le prénom et l'âge
 - Créer une classe Chien, dont les attributs sont le prénom et l'âge
 - Créer une méthode "crier" pour la classe Chat, qui affiche "miaou"
-- Créer une méthode "crier" pour la classe Chat, qui affiche "ouaf"
+- Créer une méthode "crier" pour la classe Chien, qui affiche "ouaf"
 - Créer une méthode "accueillir" pour la classe Refuge, qui prend en paramètre un chat ou un chien et qui l'ajoute dans "animaux_en_stock"
 - Créer une méthode "crier_animaux" pour la classe Refuge, qui appelle la méthode crier de chaque animal dans "animaux_en_stock"
