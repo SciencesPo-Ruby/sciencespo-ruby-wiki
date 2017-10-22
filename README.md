@@ -15,6 +15,7 @@ Le cours se déroule sur 12 séances de 2h. Les évaluations seront réalisées 
 1. [Mettre en place son environnement de travail](environnement_de_travail.md)
 2. [Ruby : les bases](bases_ruby.md)
 3. [Ruby : notions avancées](ruby_avance.md)
+4. [TP : Inscriptions pédagogiques](inscriptions_pedagogiques.md)
 
 Pour plus de détails sur la théorie de Ruby, vous pouvez aussi consulter le très bon site http://rubylearning.com/satishtalim/tutorial.html
 
