@@ -1,0 +1,45 @@
+<%= form_with(model: etudiant, local: true) do |form| %>
+  <% if etudiant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(etudiant.errors.count, "error") %> prohibited this etudiant from being saved:</h2>
+
+      <ul>
+      <% etudiant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nom %>
+    <%= form.text_field :nom, id: :etudiant_nom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prenom %>
+    <%= form.text_field :prenom, maxlength: 10, id: :etudiant_prenom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_naissance %>
+    <%= form.date_select :date_naissance,
+    start_year: 1900,
+    end_year: 2017,
+    id: :etudiant_date_naissance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :master_id %>
+    <%= form.select :master_id,
+    options_for_select(
+      Master.all.map{ |m| [m.nom, m.id] },
+      params[:master_id]
+      )
+    %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
