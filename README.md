@@ -16,6 +16,8 @@ Le cours se déroule sur 12 séances de 2h. Les évaluations seront réalisées 
 2. [Ruby : les bases](bases_ruby.md)
 3. [Ruby : notions avancées](ruby_avance.md)
 4. [TP : Inscriptions pédagogiques](inscriptions_pedagogiques.md)
+5. [Rails : vers la création de notre premier site web](rails_decouverte.md)
+6. [TP : Site web basique pour modéliser Sciences Po](web_sciencespo_basique.md)
 
 Pour plus de détails sur la théorie de Ruby, vous pouvez aussi consulter le très bon site http://rubylearning.com/satishtalim/tutorial.html
 
