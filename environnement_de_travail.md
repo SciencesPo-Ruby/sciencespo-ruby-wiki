@@ -1,80 +1,85 @@
 # Mettre en place l'environnement de travail
 
-Afin de faciliter les travaux de la classe, le cours dipose d'un ordinateur hébergé chez OVH : il s'agit d'un serveur informatique.
+Afin de faciliter les travaux de la classe, le cours repose sur un environnement de développement en ligne nommé Code Anywhere.
 
-Ce serveur permet d'avoir un environnement de travail identique pour tous les élèves, plutôt que de devoir gérer les nombreuses différences entre les ordinateurs portables / fixes, utilisant Windows / Linux / Mac, tournant sur 32 ou 64 bits...
+Ce logiciel en ligne permet de coder et d'exécuter du code sans installation complémentaire, que l'on utilise un ordinateur portable ou fixe, un ordinateur Windows / Linux / Mac, tournant sur 32 ou 64 bits...
 
-Cette section montre comment connecter son ordinateur portable au serveur du cours.
+Cette section montre comment préparer son environnement de travail sur Code Anywhere.
 
-## 1) Description du serveur
+## 1) Accès
 
-Le serveur est une machine sous Linux hébergée chez OVH.
+Code Anywhere est accessible sur l'URL https://www.codeanywhere.com.
 
-Sa configuration est celle d'un VPS SSD 3 selon le lien : https://www.ovh.com/fr/vps/vps-ssd.xml
+## 2) Création de l'environnement de départ
 
-Cette machine fournit un bon compromis prix / performances, et permet d'avoir une machine Linux accessible depuis n'importe où.
 
-Programmer un site web est beaucoup plus simple sous Linux : la mise en place de Ruby on Rails est triviale et les tests sont plus faciles à lancer. Cette machine Linux accessible depuis toute machine connectée à Internet fournit ainsi un bon terrain de jeu pour les travaux de ce cours.
+### 2.1 Créer un projet
 
-## 2) Se connecter au serveur du cours
+Après création d'un compte utilisateur, vous devrez créer un projet.
 
-La communication entre machine passe par un protocole de transmission de l'information. Un tel protocole permet d'échanger des instructions avec une machine distante, ou de transférer des fichiers.
+Un projet est un ensemble de fichiers (votre code), ainsi qu'un environnement d'exécution (ce qui lance votre code).
 
-Dans le cadre de ce cours, nous utiliserons le protocole standard de communication avec une machine Linux : SSH (Secure SHell).
+Lors de votre première connexion, une fenêtre "Create New Project" s'affiche. Choisissez un nom de projet et validez.
 
-### 2.1) Se connecter au serveur depuis une machine Linux
+Pour créer un nouveau projet, vous pouvez aussi cliquer sur "File", puis "New Project". Choisissez alors un nom de projet, et validez.
 
-1. Ouvrir une console Bash
-2. Taper `ssh LOGIN@SERVEUR` en remplaçant "LOGIN" par votre identifiant et "SERVEUR" par l'adresse de la machine Linux du cours.
-3. Confirmer avec la touche "Entrée".
-4. Saisir votre mot de passe et confirmer avec la touche "Entrée". Attention : lors de la saisie du mot de passe, rien n'apparaîtra à l'écran par mesure de sécurité.
+### 2.2 Choisir un environnement d'exécution
 
-### 2.2) Se connecter au serveur depuis une machine Windows
+Pour les besoins du cours, nous utiliserons un "container" avec Ruby et Ruby on Rails sur Ubuntu 14.04.
 
-1. Télécharger Putty sur : https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe
-2. Lancer Putty
-3. Dans le champ "Hostname" / "IP address", saisir l'adresse de la machine Linux du cours.
-4. Cliquer sur "Open"
-5. Saisir votre identifiant et confirmer avec la touche "Entrée"
-6. Saisir votre mot de passe et confirmer avec la touche "Entrée". Attention : lors de la saisie du mot de passe, rien n'apparaîtra à l'écran par mesure de sécurité.
+Si la curiosité vous pousse à chercher pourquoi prendre un container avec Ruby et Ruby on Rails sur Ubuntu 14.04 :
+- un container est un "mini ordinateur" qui permet d'exécuter du code temporairement ou de faire tourner une application web, ce qui nous intéresse tout particulièrement ici ;
+- Ruby, parce que c'est le langage de programmation que nous utilisons ici ;
+- Ruby on Rails, parce que c'est la technologie qui permet de produire des sites web avec Ruby.
 
-### 2.3) Se connecter au serveur depuis une machine Mac
+### 2.3 Voir l'ensemble de ses projets
 
-1. Afficher les applications à l'aide de la touche "F4".
-2. Taper "Terminal" dans le moteur de recherche. Valider avec la touche "Entrée".
-3. Taper `ssh LOGIN@SERVEUR` en remplaçant "LOGIN" par votre identifiant et "SERVEUR" par l'adresse de la machine Linux du cours.
-4. Confirmer avec la touche "Entrée".
-5. Saisir votre mot de passe et confirmer avec la touche "Entrée". Attention : lors de la saisie du mot de passe, rien n'apparaîtra à l'écran par mesure de sécurité.
+Si vous souhaitez consulter l'ensemble de vos projets, cliquez-ici : https://codeanywhere.com/dashboard.
 
-## 3) Installer l'éditeur de code Atom et le connecter au serveur de cours
+Vous pouvez aussi accéder à ce lien en cliquant sur l'icône de profil (en haut à droite de l'écran), puis sur Dashboard.
 
-### 3.1) Installer l'éditeur de code Atom
+## 3) Coder sur Code Anywhere
 
-1. Aller sur le site d'Atom https://atom.io/
-2. Télécharger le logiciel
-3. Installer le logiciel
+### 3.1 La console de développement
 
-### 3.2) Installer le kit de connexion au serveur de cours
+La console de développement est un environnement interactif reposant sur le container Ruby on Rails Ubuntu 14.04 choisi précédemment, et qui permet d'exécuter des instructions informatiques.
 
-1. Ouvrir Atom
-2. Cliquer sur "View" puis sur "Toggle Command Palette"
-3. Taper "Install Packages And Themes" puis confirmer avec la touche "Entrée"
-4. Taper "SFTP-Deployment" dans le moteur de recherche, confirmer avec "Entrée"
-5. Cliquer sur "Install" sur l'élément "SFTP-Deployment".
+Il s'agit globalement de donner des instructions à un "mini ordinateur en ligne", sauf qu'au lieu de cliquer, on saisit des lignes de commandes en texte.
 
-### 3.3) Configurer Atom pour se connecter au serveur de cours
+C'est par ce biais que nous testerons du code, et que nous lancerons nos programmes ou nos sites internet.
 
-1. Créer un dossier dédié au cours
-2. Créer un fichier vide nommé "test.txt" dans ce dossier.
-3. Ouvrir Atom
-4. Cliquer sur "File" puis "Add Project Folder", et sélectionner le dossier dédié au cours
-5. Cliquer sur "View" puis sur "Toggle Command Palette"
-6. Taper "Sftp Deployment: MapToRemote" et confirmer avec la touche "Entrée".
-7. Choisir l'option "SFTP". Un fichier nommé "deployment-config.json" apparaît.
-8. Ouvrir le fichier "deployment-config.json" avec Atom en double-cliquant dessus.
-9. Remplacer le contenu du champ "host" par l'adresse du serveur de cours
-10. Remplacer le contenu du champ "username" par votre identifiant
-11. Remplacer le contenu du champ "password" par votre mot de passe
-12. Remplacer le contenu du champ "remotePath" par `/home/LOGIN` où LOGIN est votre identifiant
-13. Mettre le champ "uploadOnSave" à true
-14. Sauvegarder à l'aide de la combinaison de touches "CTRL+S" sur Windows/Linux, "CMD+S" sur Mac. Une icône de chargement apparaît et affiche "Upload success" en cas de succès de la configuration.
+La console de développement est accessible via la colonne de gauche, dans la catégorie "Connections". Faites un clic-droit sur votre container, puis "SSH-Terminal" pour lancer la console.
+
+### 3.2 Les fichiers
+
+Code Anywhere vous permet de créer ou de stocker des fichiers comme du texte, des images, des PDFs...
+
+Pour créer votre premier fichier, cliquez sur "File" puis "New File".
+
+Pour enregistrer votre fichier, cliquez sur "File" puis "Save".
+
+Attention : en mode gratuit, il est possible de perdre des données avec Code Anywhere ! Pensez à télécharger vos fichiers de travail en fin de séance, en faisant "Clic-droit" sur le fichier, puis "Download".
+
+### 3.3 Les dossiers
+
+Code Anywhere permet également de créer un dossier.
+
+Pour cela, faites "Clic-droit" sur le container, puis "Create folder".
+
+Si vous faites "Clic-droit" puis "Download" sur un dossier, vous téléchargerez alors l'ensemble du dossier.
+
+### 3.4 Exécuter un fichier
+
+Via la console de développement, tapez "ruby NOMDUFICHIER" en remplaçant NOMDUFICHIER par le nom du fichier à exécuter.
+
+Validez avec la touche "Entrée".
+
+## 5) Mode de travail recommandé
+
+Voici quelques règles de base qui permettront d'avoir une structure de travail "claire" pour bien débuter sur Ruby :
+
+- un dossier de travail = une séance
+- un fichier .rb = un fichier de code Ruby pour résoudre un exercice
+- dans le code, nous éviterons les espaces inutiles
+- l'indentation se fera à l'aide de deux espaces (touche Tab sur Code Anywhere)
+- à la fin de chaque séance, téléchargez votre dossier de travail pour éviter toute perte de données !
