@@ -1,0 +1,25 @@
+###########
+## Exercice
+###########
+
+# Session 2 - Exercice 1
+# ----------------------
+# Définition :
+# Créer une fonction nommée "saluer_plusieurs",
+# qui prend en paramètre une variable nommée "prenoms".
+# Cette variable "prenoms" contiendra un tableau de prénoms.
+# -
+# Objectif :
+# saluer_plusieurs affichera alors "Bonjour PRENOM",
+# pour chaque prénom contenu dans la variable "prenoms",
+# en remplaçant PRENOM par le prénom lu.
+# -
+# Exemples :
+# saluer_plusieurs(["Thierry","Jean"]) affichera :
+# Bonjour Thierry
+# Bonjour Jean
+# saluer_plusieurs(["Jean","Paul","Martin"])
+# Bonjour Jean
+# Bonjour Paul
+# Bonjour Martin
+

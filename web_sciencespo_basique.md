@@ -97,7 +97,7 @@ Pour cela, on remplace les lignes mentionnées par :
 
 form.select sert à créer un menu de sélection dans un formulaire, et options_for_select permet de générer les options correspondantes.
 
-Ici, on dit que l'on prend toutes les écoles disponibles (Ecole.all), et que pour chacune de ces écoles, on affiche le nom à l'utilisateur, et la sélection de cette école affectera l'id de cette école dans l'étudiant (|e| [e.nom, e.id]). Enfin, on précise également que si l'étudiant un déjà une école, celle-ci sera affichée par défaut dans le menu déroulant (params[:ecole_id]).
+Ici, on dit que l'on prend toutes les écoles disponibles (Ecole.all), et que pour chacune de ces écoles, on affiche le nom à l'utilisateur, et la sélection de cette école affectera l'id de cette école dans l'étudiant (`|e| [e.nom, e.id]`). Enfin, on précise également que si l'étudiant un déjà une école, celle-ci sera affichée par défaut dans le menu déroulant (`params[:ecole_id]`).
 
 De même, si vous créez un étudiant, et que vous consultez sa fiche, le champ école affiche une valeur inintelligible : elle affiche l'objet Ruby "Ecole", et non le nom de l'école affectée à l'étudiant...
 
